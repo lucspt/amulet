@@ -1,0 +1,25 @@
+activity,activity_id,keywords,unit
+wearables.textiles,textiles-type_textiles,"textiles, clothing material, cloth, fibre, knit, woven",money
+products.furniture,consumer_goods-type_furniture_other_manufactured_goods_not_elsewhere_specified,"furniture, home decor, furnishings",money
+consumables.sugar,consumer_goods-type_sugar,"sugar, sweets, candy",money
+products.paper,paper_products-type_paper_paper_products,"paper, printing paper, paper-sheet",money
+consumables.tobacco,consumer_goods-type_tobacco_products,"tobacco, smoking, cigarettes, cigar, chewing tobacco",money
+products.soap,consumer_goods-type_soap_cleaning_compounds,"soap, hand soap, dish soap, cleaning, washing",money
+wearables.jewelry,consumer_goods-type_jewelry_silverware,"jewlry, silver, gemstone, gold, stainless steel, platinum, diamond",money
+consumables.frozen,consumer_goods-type_frozen_food,"frozen food, processed food, pre-packaged, ready-to-eat, microwavable",money
+energy,electricity-supply_grid-source_supplier_mix,"energy, electricity, killowatts, energy generation, power, utility, outlet, cable, plug, heating, cooling, wattage, volts, megawatt, joules",energy
+clothing.fur,consumer_goods-type_wearing_apparel_furs,"furs, hairy, fluffy, furry",money
+clothing.leather,consumer_goods-type_leather_leather_products,"leather, thick, hard, tough, leather jacket, leather shoes, cow skin",money
+clothing.reused,consumer_goods-type_clothing_reused,"reused clothing, recycled clothing, second hand clothing, thrift shopping, thrifted, circular clothing",weight
+clothing.plastic,textiles-type_fibre_polyester_market_for_fibre_polyester,"nylon, polyester, acrylic, plastic-textiles",weight
+consumables.vegetables fruits nuts,arable_farming-type_vegetables_fruit_nuts,"vegetables, fruits, nuts, peanuts, legumes, veggies, peppers, leaves, seedless, steamed vegetables, smoothie, fruit juice, vegetable juice, boiled vegetables, sprouted, sprouts, plants, rooted, natural, garden, orchard, planted, harvested, picked, herbs, vegan, vegetarian, ripe, seeded",money
+consumables.dairy,consumer_goods-type_dairy_products,"dairy, milk, butter, cream, whipped cream, ice cream, yogurt, whey",money
+consumables.beef,consumer_goods-type_meat_products_beef,"red meat, beef, steak, new york strip, burger, grilled steak, tomohawk steak, ribs, porterhouse, t-bone, tri-tip, filet mignon, rib eye, cow",money
+consumables.pork,consumer_goods-type_meat_products_pork,"pork, pig, bacon, ribs, pork chops, ground pork",money
+consumables.poultry chicken turkey duck geese,consumer_goods-type_meat_products_poultry,"poultry, chicken, turkey, duck, geese, bird, quail, chicken tender, chicken nuggets",money
+consumables.fish,consumer_goods-type_fish_products,"fish, seafood, wild caught, salmon, tuna, tilapia, cod, shrimp, sushi, caviar, atlantic ocean, pacific ocean, trout, ocean animal, farmed fish",money
+consumables.coffee tea,consumer_goods-type_coffee_tea,"coffee, tea, starbucks, coffee-bean, espresso, mocha, cappuccino, latte, iced coffee, iced tea, spiced coffee, spiced tea, black coffee, green tea, black tea, caffeine, caffeinated, dark coffee, peet's coffee, decaf, ground coffee",money
+consumables.oil vegetable oil,consumer_goods-type_vegetable_oils_fats,"olive oil, virgin olive oil, extra virgin olive oil, canola oil, sunflower oil, avocado oil, pumpkin seed oil, walnut oil, grapeseed oil, hemp seed oil, peanut oil, sesame oil, flaxseed oil",money
+consumables.rice,consumer_goods-type_processed_rice,"brown rice, white rice, quinoa, long grain, short grain, jasmine, basmati",money
+consumables.other food,consumer_goods-type_food_products_not_elsewhere_specified,"dinner, lunch, breakfast, desert, entrée, supper, appetizer, snacks, edible, food, hungry, chew, munch, grub, eat, taste",money
+consumables.other meat,consumer_goods-type_meat_products_not_elsewhere_specified,"cold cuts, sliced meat, exotic meat, rare meat, deli, butcher, venison, animal meat, salami",money
