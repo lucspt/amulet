@@ -1,0 +1,12 @@
+PI_KEY*
+*.mp3
+*.wav
+.env
+__pycache__
+contenders.py 
+dev.py 
+mql_prompt.txt 
+.coverage
+finetune.py
+notebook.ipynb 
+.pytest*
