@@ -10,4 +10,9 @@ Made using the OpenAI API.
 
 Question: What are my current emissions?
 
+
+https://github.com/lucspt/amulet/assets/149544385/48c0d9e1-37c8-4075-9927-2a1d989065d2
+
+
+
 built by [Luca Caputo](https://github.com/lucspt)
