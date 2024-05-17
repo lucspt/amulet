@@ -6,11 +6,6 @@ from multiprocessing import Process
 import time, math
 import pymongo
 
-"""
-Don't think this should be run on the amulet directly, because it could eventually consume too much.
-if anything it should just be an api call that sends it to another resource
-"""
-
 
 class PledgeKeeper:
     __slots__ = (

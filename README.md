@@ -1,4 +1,4 @@
-# Sprive Amulet
+# Amulet
 
 This project contains python code that I used to power a wearable Raspberry Pi device that can help a person to track and reduce their carbon footprint and emissions. 
 With the appropriate commands a user can record their emitting activites, find the emissions of a given activity, find the sum 

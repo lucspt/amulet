@@ -19,12 +19,6 @@ class Model:
         "tts_voice",
         "tts_speed",
     )
-    """Good Ideas: 
-        - Bing web search api, access to real time knowledge/data:  https://www.microsoft.com/en-us/bing/apis/llm https://portal.azure.com/
-        - https://api.search.brave.com/app/subscriptions/subscribe?tab=ai this one is Brave, another web search api, looks good and more accessible!
-            it's not like we thought )"
-            
-        """
 
     def __init__(self, savior_id: str, amulet_tools: dict[str, Callable]):
         client = OpenAI()
