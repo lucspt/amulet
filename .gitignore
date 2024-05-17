@@ -10,3 +10,4 @@ mql_prompt.txt
 finetune.py
 notebook.ipynb 
 .pytest*
+mock.py

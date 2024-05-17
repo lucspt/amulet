@@ -233,7 +233,6 @@ class Model:
         print("whisper starting")
         text = self.audio_to_text(audio_buffer=audio_input)
         print("whisper done")
-        # TODO: check what happens when whisper is given blank audio and if we can use control flow before or after an input to it
         prompt = self.prompts["chat"] if not self.current_thread else None
         messages = self.format_inputs(content=text, prompt=prompt)
         print("chat starting")
@@ -311,57 +310,5 @@ class VisionModel:
             temperature=self.vision_temperature,
             tools=self.tools
         )
-        #NOW WE NEED TO EITHER GIVE TOOLS TO MODEL IN WHILE TOOL CALLS OR WE NEED TO CALL CHAT MODEL HERE WITH RESPONSE
+
         return response.choices[0].message.content
-        
-
-        
-
-
-# class ModelWithVisionProxy(Model):
-#     # MAKE SURE TO CHANGE `get_user_view` TO `describe_user_view` before using this
-
-#     def vis_response_to_tool_call(self, id: str, content: str):
-#         return {
-#             "tool_call_id": id,
-#             "role": "tool",
-#             "name": "get_user_view",
-#             "content": content,
-#         }
-
-#     def format_vision_inputs(self, encoded_image: str) -> list:
-#         vision_prompt = {"role": "system", "content": self.prompts["vision"]}
-
-#         messages = [
-#             vision_prompt,
-#             {
-#                 "role": "user",
-#                 "content": [
-#                     {"type": "text", "text": None},
-#                     {
-#                         "type": "image_url",
-#                         "image_url": {"url": encoded_image, "detail": "low"},
-#                     },
-#                 ],
-#             },
-#         ]
-#         return messages
-    
-    # def get_vision_completion(self, messages: list, image_file) -> dict:
-    #     encoded_image = self.encode_image(image_file=image_file)
-    #     vision_input = self.format_vision_inputs(encoded_image=encoded_image)
-    #     response = self.client.chat.completions.create(
-    #         model="gpt-4-vision-preview",
-    #         messages=vision_input,
-    #         temperature=0.4,
-    #         # max_tokens=?
-    #     )
-    #     vis_response = response.choices[0].message.content
-    #     messages[-1].content = vis_response #add to the last tool_call as if the function responded 
-
-    #     response = self.get_chat_completion(
-    #         messages=messages, return_tool=True, request_image=False
-    #     )
-
-    #     return response
-    
