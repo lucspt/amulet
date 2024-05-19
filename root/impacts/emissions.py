@@ -109,7 +109,6 @@ class GHGCalculator:
     def format_response(self, res: dict) -> dict:
         """Extract the wanted info from api response"""
         emissions = res["constituent_gases"]
-        print(emissions, "constituent gases")
         emissions = {
             "co2e": res["co2e"], 
             "co2e_unit": res["co2e_unit"],
