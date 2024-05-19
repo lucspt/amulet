@@ -143,11 +143,6 @@ class Model:
         # TODO: COME BACK TO WHATS WRITTEN BELOW
         """Implements a call to gpt with vision
 
-        NOTE AND COME BACK TO: the previous calls
-        were from the text only model which requested an image, and in the function response
-        the get_current_view tool only returns an image file string, we add the image details
-        the next message instead of the function response, not 100% sure if this is correct
-
         Args:
             messages: the thread to continue
             image_file: image_file to encode and append to list of passed messages
@@ -230,14 +225,10 @@ class Model:
 
         Returns: An audio file location reference containing the tts response
         """
-        print("whisper starting")
         text = self.audio_to_text(audio_buffer=audio_input)
-        print("whisper done")
         prompt = self.prompts["chat"] if not self.current_thread else None
         messages = self.format_inputs(content=text, prompt=prompt)
-        print("chat starting")
         response = self.get_chat_completion(messages=messages, tools=self.tools)
-        print("chat done")
         response_message = response.choices[0].message
 
         is_flagged = self.moderate(messages)
@@ -246,24 +237,18 @@ class Model:
         # create ref instead of rekeying in the loop
         tool_calls, call_tools = response_message.tool_calls, self.call_tools
         while tool_calls:
-            print("while tool calls")
             messages.append(response_message)
             messages, requested_user_view = call_tools(
                 tool_calls=tool_calls, messages=messages
             )
-            print(messages, "from after tool calls")
-            print("REQUESTED USER VIEW SHOULD BE FALSE: ", requested_user_view)
-            print("chat 2 starting")
             response = self.get_chat_completion(
                 messages=messages, tools=self.tools if requested_user_view else None
             )  # can add tools here too
-            print("chat 2 done")
             response_message = response.choices[0].message
             tool_calls = response_message.tool_calls
         messages.append(response_message)
         self.current_thread = messages
         if (res := response_message.content): 
-            print("now tts")
             return self.text_to_audio(res)
 
 
